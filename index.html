@@ -2,8 +2,17 @@
 <html>
   <head>
     <title>Coursera Angular Learning</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   </head>
   <body>
     <h1>Hello Coursera! </h1>
+    <div ng-app="" ng-init="count=0">
+    <a ng-click="shouldShowDiv=!shouldShowDiv">Let's see which DIV is shown</a>
+    <div ng-show="shouldShowDiv">This div will appear if shouldShowDiv is <em>True</em></div>
+    <div ng-hide="shouldShowDiv">This Div will appear if shouldShowDiv is <em>False</em></div>
+  <a ng-click="count = count + 1">Add one</a>
+  <h3>Double the count is: {{ 2 * count }}</h3>
+</div>
+</div>
   </body>
 </html>
