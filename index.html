@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html  ng-app="myApp">
+<html ng-app="LunchCheck">
   <head>
-    <title>Calculator Application</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Module1_Solution1</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
   </head>
   <body>
- <h1>Name Calculator App</h1>
-    <div ng-controller="myFirstController">
-    <input type="text" ng-model="name" ng-keyup="displayNumeric()">
-    <p> The value of the name is {{totalValue}} </p>
-  </div>
+    <center>
+    <div ng-controller="LunchCheckController">
+      <input type="text" ng-model="foodItems" ng-style="borChange" placeholder="Enter the food Items" id="textBox"></input><br><br>
+      <button type="button" ng-click="checkFunction()" id="button-custom">Check If that is Too Much</button>
+      <p ng-style="colChange" id="message">{{message}}</p>
+    </div>
+  </center>
   </body>
 </html>
